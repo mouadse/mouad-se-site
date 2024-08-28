@@ -5,7 +5,7 @@ id: home
 permalink: /
 ---
 
-# Hey there! 👋
+# Hey there! 👋 The site is still under construction be back soon. For now here is a coffee ☕
 
 <p style="padding: 3em 1em; background: #f5f7ff; border-radius: 4px;">
   Take a look at <span style="font-weight: bold">[[Your first note]]</span> to get started on your exploration.
