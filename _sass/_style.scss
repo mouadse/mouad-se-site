@@ -1,9 +1,9 @@
-/* Base Tones */
-$color-primary: #100F0F; /* black - tx */
-$color-text: #282726; /* base-900 - tx */
-$color-subtext: #6F6E69; /* base-600 - tx-2 */
-$color-border: #DAD8CE; /* base-150 - ui-2 */
-$color-box-background: mix(#100F0F, #FFFCF0, 4%); /* black and paper mixed */
+/* Tokyo Night Theme Variables */
+$color-primary: #7aa2f7; /* Blue */
+$color-text: #a9b1d6; /* Light grayish-blue */
+$color-subtext: #9aa5ce; /* Muted grayish-blue */
+$color-border: #3b4261; /* Borders */
+$color-box-background: mix(#1a1b26, white, 4%); /* Background slightly mixed with white */
 $border-radius: 4px;
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
@@ -32,7 +32,7 @@ time {
 footer {
   margin: 2em 0;
   font-size: 0.8em;
-  color: mix($color-text, #FFFCF0, 80%); /* text and paper mixed */
+  color: mix($color-text, #1a1b26, 80%); /* text and background mixed */
   padding-top: 1em;
 }
 
@@ -77,15 +77,15 @@ a {
   border-bottom: 1px solid $color-border;
   color: $color-primary;
   &:hover {
-    color: #100F0F !important; /* black */
-    background: #FFFCF0; /* paper */
+    color: #7dcfff !important; /* Cyan */
+    background: #1a1b26; /* Background */
   }
   &:after {
     position: relative;
     top: -0.5em;
     font-size: 0.7em;
     content: "↗";
-    color: #878580; /* base-500 */
+    color: #9aa5ce; /* Subtext */
   }
   &.internal-link:after,
   &.footnote:after,
@@ -95,8 +95,8 @@ a {
 }
 
 *:focus {
-  background: #FFFCF0 !important; /* paper */
-  color: #100F0F !important; /* black */
+  background: #ff9e64 !important; /* Orange */
+  color: #1a1b26 !important; /* Background */
 }
 
 nav {
@@ -123,19 +123,19 @@ nav {
 }
 
 code {
-  background: #F2F0E5; /* base-50 */
+  background: #2e3440; /* Code background */
   padding: 0.1em 0.2em;
   border-radius: 4px;
 }
 
 .invalid-link {
-  color: #403E3C; /* base-800 */
+  color: #f7768e; /* Red */
   cursor: help;
-  background: #FFFCF0; /* paper */
+  background: #1a1b26; /* Background */
   padding: 0 0.1em;
 }
 
 .invalid-link-brackets {
-  color: #878580; /* base-500 */
+  color: #9aa5ce; /* Subtext */
   cursor: help;
 }
