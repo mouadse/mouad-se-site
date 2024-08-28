@@ -1,8 +1,9 @@
-$color-primary: hsl(0, 0%, 10%);
-$color-text: hsl(0, 0%, 20%);
-$color-subtext: hsl(0, 0%, 30%);
-$color-border: hsl(0, 0%, 85%);
-$color-box-background: mix($color-primary, white, 4%);
+$color-primary: hsl(230, 55%, 60%);
+$color-text: hsl(220, 25%, 85%);
+$color-subtext: hsl(220, 15%, 65%);
+$color-border: hsl(220, 25%, 25%);
+$color-box-background: hsl(230, 20%, 18%);
+$color-background: #1a1b26;
 $border-radius: 4px;
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
   sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
@@ -17,6 +18,7 @@ body {
   color: $color-text;
   font-size: 1rem;
   max-width: 63em;
+  background-color: $color-background;
 
   @media (min-width: 820px) {
     font-size: 1.2rem;
@@ -32,7 +34,7 @@ time {
 footer {
   margin: 2em 0;
   font-size: 0.8em;
-  color: mix($color-text, white, 80%);
+  color: mix($color-text, $color-background, 80%);
   padding-top: 1em;
 }
 
@@ -50,6 +52,7 @@ blockquote {
   font-size: 0.88em;
   background: $color-box-background;
   border-radius: $border-radius;
+  color: $color-text; /* Added this line to fix white text */
 
   p {
     margin: 0;
@@ -73,6 +76,7 @@ h6 {
   line-height: 1.3;
   margin-bottom: 0;
   padding-bottom: 0;
+  color: hsl(220, 50%, 80%);
 }
 
 a {
@@ -80,17 +84,18 @@ a {
   padding: 0 0.1em;
   text-decoration: none;
   border-bottom: 1px solid $color-border;
-  color: $color-primary;
+  background-color: hsl(230, 20%, 18%);
+  color: hsl(190, 80%, 70%);
   &:hover {
-    color: black !important;
-    background: #fffaf1;
+    color: #ff007c !important;
+    background: hsl(230, 30%, 30%);
   }
   &:after {
     position: relative;
     top: -0.5em;
     font-size: 0.7em;
     content: "↗";
-    color: #aaaaaa;
+    color: hsl(220, 15%, 55%);
   }
   &.internal-link:after,
   &.footnote:after,
@@ -99,48 +104,24 @@ a {
   }
 }
 
-*:focus {
-  background: #ffe8bc !important;
-  color: black !important;
-}
-
-nav {
-  margin: 1em 0 3em;
-}
-
-#notes-entry-container {
-  display: grid;
-  grid-gap: 2em;
-  grid-template-areas:
-    "content"
-    "side";
-
-  @media (min-width: 700px) {
-    grid-template-columns: 3fr 1fr;
-    grid-template-areas: "content side";
-  }
-}
-
-.backlink-box {
-  background: $color-box-background;
-  padding: 1em;
+// New styles to fix white boxes
+.main-content-box {
+  background-color: $color-box-background;
+  padding: 20px;
   border-radius: $border-radius;
+  color: $color-text; /* Added this line to fix white text */
 }
 
-code {
-  background: #f5f5f5;
-  padding: 0.1em 0.2em;
-  border-radius: 4px;
+.note-title-box {
+  background-color: hsl(230, 20%, 22%);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: $border-radius;
+  border: 1px solid $color-border;
+  color: $color-text; /* Added this line to fix white text */
 }
 
-.invalid-link {
-  color: #444444;
-  cursor: help;
-  background: #fafafa;
-  padding: 0 0.1em;
+.highlight {
+  color: hsl(150, 60%, 60%);
 }
 
-.invalid-link-brackets {
-  color: #ccc;
-  cursor: help;
-}
